@@ -1,0 +1,8 @@
+*****Soy un texto insertado desde python*****
+3.23
+HOLA
+hola
+*****Soy un texto insertado desde python*****
+*****Soy un texto insertado desde python*****
+1
+2
