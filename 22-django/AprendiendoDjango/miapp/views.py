@@ -39,13 +39,10 @@ def index(request):
 
     html += "</ul>"
 
-    return HttpResponse(layout+html)
+    return render(request,'index.html')
 
 def hola_mundo(request):
-    return HttpResponse(layout+"""
-        <h1>Hola mundo con Django!</h1>
-        <h3>Soy Luis Armando Lira</h3>
-    """)
+    return render(request,'hola_mundo.html')
 
 def pagina(request, redirigir=0):
 
@@ -54,10 +51,7 @@ def pagina(request, redirigir=0):
     elif redirigir == 2:
         return redirect('contacto', nombre="Luis", apellidos="lira glez")
 
-    return HttpResponse(layout+'''
-        <h1>Página de mi web</h1>
-        <p>Creado por Luis Lira</p>
-    ''')
+    return render(request,'pagina.html')
 
 def contacto(request,nombre="",apellidos=""):
     html = ""

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% endblock %}
+        | Luis Armando Lira González
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'images/logo.png' %}">
+            <h1> Sitio web con Django</h1>
+        </div>
+    </header>
+
+    <nav>
+        <h1>Sitio web con Django | Luis Armando Lira</h1>
+        <ul>
+            <li>
+                <a href="/inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="/hola-mundo">Hola Mundo</a>
+            </li>
+            <li>
+                <a href="/pagina-pruebas">Página de Pruebas</a>
+            </li>
+            <li>
+                <a href="/contacto">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <h2 class="title">Titulo Prueba</h2>
+        {% block content %}
+        <!-- Código que viene de templates -->
+        <p>Contenido del bloque original</p>
+        {% endblock %}
+    </div>
+
+    <footer>
+        Master en Python &copy; Luis Armando Lira González
+    </footer>
+</body>
+
+</html>
