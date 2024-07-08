@@ -1,15 +1,15 @@
 # Tkinter
-# Modulo para crear interfaces gráficas de usuario
+# Módulo para crear interfaces gráficas de usuario
 
 from tkinter import *
 import os.path
 
-class Programa():
+class Programa:
     def __init__(self):
-        self.title = 'Interfáz gráfica con Python'
-        self.icon = './imagenes/marketing.ico'
-        self.icon_alt = './21-tkinter/imagenes/marketing.ico'
-        self.size = '770x470'
+        self.title = " MC-Traker | Automatizaciones y Analíticos 2024"
+        self.icon = './imagenes/imagen_carpeta.ico'
+        self.icon_alt = './MC-TRAKER/imagenes/imagen_carpeta.ico'
+        self.size = "770x470"
         self.resizable = False
     
     def cargar(self):
@@ -17,7 +17,7 @@ class Programa():
         ventana = Tk()
         self.ventana = ventana
 
-        # Titulo de la ventana
+        # Título de ventana
         ventana.title(self.title)
 
         # Comprobar si existe un archivo
@@ -36,14 +36,14 @@ class Programa():
         # Cambio en el tamaño de la ventana
         ventana.geometry(self.size)
 
-        # Bloquear el tamaño de la ventana
+        # Bloquear el tamñaño de la ventana
         if self.resizable:
             ventana.resizable(1,1)
         else:
             ventana.resizable(0,0)
-    
-    def addTexto(self, dato):
-        texto = Label(self.ventana, text=dato)
+
+    def addText(self,texto_ingresado):
+        texto = Label(self.ventana, text=texto_ingresado)
         texto.pack()
 
     def mostrar(self):
@@ -53,6 +53,6 @@ class Programa():
 # Instanciar mi programa
 programa = Programa()
 programa.cargar()
-programa.addTexto("Hola")
-programa.addTexto("Soy Luis Armando Lira")
+programa.addText("Adios")
+programa.addText("hey")
 programa.mostrar()
